@@ -1,0 +1,36 @@
+<div class="container" >
+    UserId:
+    <input [(ngModel)]="userId" placeholder="Enter your Id" required>
+    <button class="registerbtn" (click)="getDoctorById()">Submit</button>
+    Firstname:
+    <input id="firstName" #firstName value=${{doctor.firstName}} required>
+   
+    Lastname:
+    <input id="lastName" #lastName value={{doctor.lastName}} required>
+
+    Age:
+    <input id="userAge" #userAge value={{doctor.userAge}} required>
+   
+    MobileNumber:<br>
+    <input id="userMobileNumber" #userMobileNumber value={{doctor.userMobileNumber}} required>
+  
+    Address1:<br>
+    <input id="userAddressLine1" #userAddressLine1 value={{doctor.userAddressLine1}} required>
+    <br>
+    Address2:<br>
+    <input id="userAddressLine2" #userAddressLine2 value={{doctor.userAddressLine2}} required>
+    <br>
+    Address3:<br>
+    <input id="userAddressLine3" #userAddressLine3 value={{doctor.userAddressLine3}} required>
+    <br>
+    UserName:<br>
+    <input id="userName" #userName value={{doctor.userName}} required>
+    <br>
+    password:<br>
+    <input id="password" #password value={{doctor.password}} required>
+    <br>
+    Specialization:<br>
+    <input id="specialization" #firstName value={{doctor.specialization}} required>
+    <br><br>
+    <button class="registerbtn" (click)="updatedoctor(doctor.userName,doctor.userAge,doctor.userMobileNumber,doctor.userAddressLine1,doctor.userAddressLine2,doctor.userAddressLine3,doctor.specialization,doctor.firstName,doctor.lastName)">Update</button>
+  </div>

@@ -1,0 +1,41 @@
+    <div class="container" >
+        <form>
+        RoleId:
+        <input [(ngModel)]="roleId" placeholder="4" required>
+      
+        Firstname:
+        <input [(ngModel)]="firstName" placeholder="Enter Firstname" required>
+       
+        Lastname:
+        <input [(ngModel)]="lastName" placeholder="Enter Lastname" required>
+   
+        Age:
+        <input [(ngModel)]="userAge" placeholder="Enter Age" required>
+       
+        MobileNumber:<br>
+        <input [(ngModel)]="userMobileNumber" placeholder="Enter MobileNumber" required>
+      
+        Address1:<br>
+        <input [(ngModel)]="addressLine1" placeholder="Enter AddressLine1" required>
+        <br>
+        Address2:<br>
+        <input [(ngModel)]="addressLine2" placeholder="Enter AddressLine2" required>
+        <br>
+        Address3:<br>
+        <input [(ngModel)]="addressLine3" placeholder="Enter AddressLine3" required>
+        <br>
+        UserName:<br>
+        <input [(ngModel)]="userName" placeholder="Enter UserName" required>
+        <br>
+        password:<br>
+        <input [(ngModel)]="password" placeholder="Enter password" required>
+        <br>
+        Bloodgroup:<br>
+        <input  [(ngModel)]="bloodgroup" placeholder="Enter Bloodgroup" required>
+        <br>
+        Disease:<br>
+        <input [(ngModel)]="disease" placeholder="Enter Disease" required>
+        <br><br>
+        <button class="registerbtn" (click)="addpatient()">Add</button>
+        </form>
+      </div>

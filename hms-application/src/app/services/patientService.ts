@@ -1,0 +1,26 @@
+import { Injectable } from '@angular/core';
+import { Patient } from '../models/Patient';
+import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PatientService
+{
+  private getPatientUrl: string;
+  private addPatientUrl: string;
+ 
+  constructor(private http: HttpClient) {
+    this.getPatientUrl = 'http://localhost:8080/patients/all';
+    this.addPatientUrl = "http://localhost:8080/patients/createpatient"
+  }
+ 
+  public getPatient(): Observable<Patient[]> {
+    return this.http.get<Patient[]>(this.getPatientUrl);
+  }
+  public savePatient(patient: Patient) {
+    console.log(patient);
+    return this.http.post<Patient>(this.addPatientUrl, patient);
+  }
+}

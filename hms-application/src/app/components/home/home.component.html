@@ -1,0 +1,13 @@
+
+    <button id="bt" (click)="savepatient()">add patient</button>
+<div class="flex-container">
+    <div *ngFor="let patient of patientList">
+        <div class="user">
+        </div>
+        <h2>{{patient.firstName}}</h2>
+        <div>Id :{{patient.userId}}<br><br> Firstname :{{patient.firstName}}<br><br> Lastname :{{patient.lastName}}<br><br> Age :{{patient.userAge}}<br><br>
+            MobileNumber:{{patient.userMobileNumber}} <br><br> AddressLine1 :{{patient.addressLine1}}<br><br> AddressLine2
+            :{{patient.addressLine2}}<br><br> AddressLine3 :{{patient.addressLIne3}}<br><br> BloodGroup
+            :{{patient.bloodGroup}}<br><br> Disease :{{patient.disease}}<br><br></div>
+    </div>
+</div>

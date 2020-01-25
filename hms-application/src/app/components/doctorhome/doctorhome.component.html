@@ -1,0 +1,48 @@
+<!-- <div class="doctor">
+<p>Welcome {{doctor.name}}</p>
+<form>
+    Doctor ID:<br>
+    <input type="text" name="id" value="{{doctor.id}}">
+    <br>
+    Name:<br>
+    <input type="text" name="name" value="{{doctor.name}}">
+    <br>
+    Age:<br>
+    <input type="text" value="{{doctor.age}}">
+    <br>
+    MobileNumber:<br>
+    <input type="text" value="{{doctor.mobileNumber}}">
+    <br>
+    Address1:<br>
+    <input type="text" value="{{doctor.address1}}">
+    <br>
+    Address2:<br>
+    <input type="text" value="{{doctor.address2}}">
+    <br>
+    Address3:<br>
+    <input type="text" value="{{doctor.address3}}">
+    <br>
+    Specialization:<br>
+    <input type="text" value="{{doctor.specialization}}">
+    <br><br>
+    <input type="button" value="update">
+    </form>
+</div>
+<router-outlet></router-outlet> -->
+<div class="buttons">
+    <button id="bt" (click)="savedoctor()">add doctor</button>
+<button id="bt" (click)="updatedoctor()">update</button>
+</div>
+<div class="flex-container">
+    <div *ngFor="let doctor of doctorList">
+        <div class="user">
+        </div>
+        <h2>{{doctor.firstName}}</h2>
+        <h3>{{doctor.specialization}}</h3>
+        <div>Id :{{doctor.userId}}<br><br> Firstname :{{doctor.firstName}}<br><br> Lastname :{{doctor.lastName}}<br><br>
+            Age :{{doctor.userAge}}<br><br>
+            MobileNumber:{{doctor.userMobileNumber}} <br><br> AddressLine1 :{{doctor.addressLine1}}<br><br> AddressLine2
+            :{{doctor.addressLine2}}<br><br> AddressLine3 :{{doctor.addressLine3}}<br><br>
+        </div>
+    </div>
+</div>
