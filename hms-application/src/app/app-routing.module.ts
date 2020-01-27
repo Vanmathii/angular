@@ -7,6 +7,7 @@ import { OptionComponent } from './components/option/option.component';
 import { AddPatientComponent } from './components/add-patient/add-patient.component';
 import { AddDoctorComponent } from './components/add-doctor/add-doctor.component';
 import { DoctorUpdateComponent } from './components/doctor-update/doctor-update.component';
+import { UpdateComponent } from './components/patient-update/update.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,9 @@ const routes: Routes = [
   {path:"doctorhome", component:DoctorhomeComponent},
   {path:"addPatient", component:AddPatientComponent},
   {path:"adddoctor", component:AddDoctorComponent},
-  {path:"updatedoctor", component:DoctorUpdateComponent}
+  {path:"updatedoctor", component:DoctorUpdateComponent},
+  {path:"updatepatient", component:UpdateComponent}
+
 
 
 ];

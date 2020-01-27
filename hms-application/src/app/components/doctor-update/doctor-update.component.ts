@@ -9,8 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./doctor-update.component.scss']
 })
 export class DoctorUpdateComponent implements OnInit {
-
-
   roleId:number;
   userId: number;
   firstName: String;
@@ -24,6 +22,7 @@ export class DoctorUpdateComponent implements OnInit {
   password:String;
   specialization:String;
   doctor:Doctor = new Doctor;
+  object:any;
   constructor (private doctorService:DoctorService,private router:Router){ }
   ngOnInit() {
   }
@@ -31,26 +30,27 @@ export class DoctorUpdateComponent implements OnInit {
   {
     this.doctor.userId=this.userId;
     this.doctorService.getDoctorById(this.userId).subscribe(data =>{
-    this.doctor=data;
+      this.object=data;    
+    this.doctor=this.object.object;
     console.log(this.doctor);
     });
   }
-  updatedoctor(userName:string,password:String,userAge:Number,userMobileNumber:string,addressLine1:string,addressLine2:string,addressLine3:string,specialization:string,firstName:string,lastName:string)
+  updatedoctor(firstName:string,lastName:string,userAge:number,userMobileNumber:string,addressLine1:string,addressLine2:string,addressLine3:string,userName:string,password:String,specialization:string )
   {
-   this.doctor.userAge=this.userAge;  
-   this.doctor.firstName=this.firstName;  
-   this.doctor.lastName=this.lastName;  
-   this.doctor.userMobileNumber=this.userMobileNumber;  
-   this.doctor.userAddressLine1=this.addressLine1;  
-   this.doctor.userAddressLine2=this.addressLine2;  
-   this.doctor.userAddressLine3=this.addressLine3;
-   this.doctor.userName=this.userName;
-   this.doctor.password=this.password;
-   this.doctor.specialization=this.specialization;
+   this.doctor.firstName=firstName;  
+   this.doctor.lastName=lastName;  
+   this.doctor.userAge=userAge; 
+   this.doctor.userMobileNumber=userMobileNumber;  
+   this.doctor.addressLine1=addressLine1;  
+   this.doctor.addressLine2=addressLine2;  
+   this.doctor.addressLine3=addressLine3;
+   this.doctor.userName=userName;
+   this.doctor.password=password;
+   this.doctor.specialization=specialization;
    console.log(this.doctor);
    this.doctorService.updateDoctor(this.doctor).subscribe(data =>{
-    this.doctor=data;
-    this.router.navigate(['/doctorhome']);
+   this.doctor=data;
+   this.router.navigate(['/doctorhome']);
   });
   }
 }

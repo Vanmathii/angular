@@ -1,1 +1,39 @@
-<p>update works!</p>
+<div class="container" >
+    UserId:
+    <input [(ngModel)]="userId" placeholder="Enter your Id" required>
+    <button class="registerbtn" (click)="getPatientById()">Submit</button>
+    Firstname:
+    <input id="firstName" #firstName value={{patient.firstName}} required>
+   
+    Lastname:
+    <input id="lastName" #lastName value={{patient.lastName}} required>
+
+    Age:
+    <input id="userAge" #userAge value={{patient.userAge}} required>
+   
+    MobileNumber:<br>
+    <input id="userMobileNumber" #userMobileNumber value={{patient.userMobileNumber}} required>
+  
+    Address1:<br>
+    <input id="userAddressLine1" #addressLine1 value={{patient.addressLine1}} required>
+    <br>
+    Address2:<br>
+    <input id="userAddressLine2" #addressLine2 value={{patient.addressLine2}} required>
+    <br>
+    Address3:<br>
+    <input id="userAddressLine3" #addressLine3 value={{patient.addressLine3}} required>
+    <br>
+    UserName:<br>
+    <input id="userName" #userName value={{patient.userName}} required>
+    <br>
+    password:<br>
+    <input id="password" #password value={{patient.password}} required>
+    <br>
+    Disease:<br>
+    <input id="disease" #disease value={{patient.disease}} required>
+    <br><br>
+    BloodGroup:<br>
+    <input id="bloodGroup" #bloodGroup value={{patient.bloodGroup}} required>
+    <br><br>
+    <button class="registerbtn" (click)="updatepatient(firstName.value,lastName.value,userAge.value,userMobileNumber.value,addressLine1.value,addressLine2.value,addressLine3.value,userName.value,password.value,disease.value,bloodGroup.value)">Update</button>
+  </div>

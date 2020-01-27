@@ -1,36 +1,79 @@
-.btn{
-    background:#3498db;
-    width:125px;
-    padding-top:5px;
-    padding-bottom:5px;
-    color:white;
-    border-radius:4px;
-    text-align: center;
-    margin-top:100px;
-    margin-bottom:20px;
-    margin-left:470px;
-    font-weight:800;
-    font-size:0.8em;
-  }
+// .btn{
+//     background:#3498db;
+//     width:125px;
+//     padding-top:5px;
+//     padding-bottom:5px;
+//     color:white;
+//     border-radius:4px;
+//     text-align: center;
+//     margin-top:100px;
+//     margin-bottom:20px;
+//     margin-left:470px;
+//     font-weight:800;
+//     font-size:0.8em;
+//   }
   
   .btn:hover{
     background:rgb(31, 99, 126); 
   }
-  .btn1{
-    background:#3498db;
-    width:125px;
-    padding-top:5px;
-    padding-bottom:5px;
-    color:white;
-    border-radius:4px;
-    text-align: center;
-    margin-top:20px;
-    margin-bottom:20px;
-    margin-left:470px;
-    font-weight:800;
-    font-size:0.8em;
-  }
+  // .btn1{
+  //   background:#3498db;
+  //   width:125px;
+  //   padding-top:5px;
+  //   padding-bottom:5px;
+  //   color:white;
+  //   border-radius:4px;
+  //   text-align: center;
+  //   margin-top:20px;
+  //   margin-bottom:20px;
+  //   margin-left:470px;
+  //   font-weight:800;
+  //   font-size:0.8em;
+  // }
   
   .btn1:hover{
     background:rgb(31, 99, 126); 
   }
+  .user{
+    background-image: url("src/app/user.png");
+    height: 150px;
+    width: 155px;
+    margin: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.doctor{
+  height: 300px;
+  width: 200px;
+  margin-left: 500px;
+}
+.patient{
+  height: 300px;
+  width: 200px;
+  margin-left: 800px;
+}
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-container > div {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 10px;
+  font-size: 10px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+    padding: 15px 31px;
+    margin: 33px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}

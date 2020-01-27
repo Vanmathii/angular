@@ -32,7 +32,13 @@
 <div class="buttons">
     <button id="bt" (click)="savedoctor()">add doctor</button>
 <button id="bt" (click)="updatedoctor()">update</button>
+<button id="bt" (click)="toggle()">delete</button>
 </div>
+<div *ngIf="show" id="delete">
+   Enter UserId:
+    <input id="userId" #userId placeholder="Enter your Id" required>
+    <button id="btn" name="delete" (click)="deletedoctor(userId.value)">Submit</button>
+ </div>
 <div class="flex-container">
     <div *ngFor="let doctor of doctorList">
         <div class="user">

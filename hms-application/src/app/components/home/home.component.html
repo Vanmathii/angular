@@ -1,13 +1,23 @@
-
+<div class="buttons">
     <button id="bt" (click)="savepatient()">add patient</button>
+    <button id="bt" (click)="updatepatient()">update</button>
+    <button id="bt" (click)="toggle()">delete</button>
+</div>
+<div *ngIf="show" id="delete">
+    Enter UserId:
+    <input id="userId" #userId placeholder="Enter your Id" required>
+    <button id="btn" name="delete" (click)="deletepatient(userId.value)">Submit</button>
+</div>
 <div class="flex-container">
     <div *ngFor="let patient of patientList">
         <div class="user">
         </div>
         <h2>{{patient.firstName}}</h2>
-        <div>Id :{{patient.userId}}<br><br> Firstname :{{patient.firstName}}<br><br> Lastname :{{patient.lastName}}<br><br> Age :{{patient.userAge}}<br><br>
-            MobileNumber:{{patient.userMobileNumber}} <br><br> AddressLine1 :{{patient.addressLine1}}<br><br> AddressLine2
-            :{{patient.addressLine2}}<br><br> AddressLine3 :{{patient.addressLIne3}}<br><br> BloodGroup
+        <div>Id :{{patient.userId}}<br><br> Firstname :{{patient.firstName}}<br><br> Lastname
+            :{{patient.lastName}}<br><br> Age :{{patient.userAge}}<br><br>
+            MobileNumber:{{patient.userMobileNumber}} <br><br> AddressLine1 :{{patient.addressLine1}}<br><br>
+            AddressLine2
+            :{{patient.addressLine2}}<br><br> AddressLine3 :{{patient.addressLine3}}<br><br> BloodGroup
             :{{patient.bloodGroup}}<br><br> Disease :{{patient.disease}}<br><br></div>
     </div>
 </div>

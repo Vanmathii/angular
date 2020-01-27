@@ -9,11 +9,30 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  patient:any;
+  userId:Number;
   object:any;
   patientList:Patient[];
   constructor (private patientService:PatientService,private router:Router){ }
   savepatient() {
   this.router.navigate(['/addPatient']);
+ }
+ updatepatient() {
+  this.router.navigate(['/updatepatient']);
+ }
+ public show:boolean = false;
+ public buttonName:any = 'delete';
+
+ toggle() {
+   this.show = !this.show;
+ }
+
+ deletepatient(userId:Number) {
+  this.patientService.deletePatient(userId).subscribe(data =>{
+    this.patient=data;
+    this.router.navigate(['/option']);
+    this.show = !this.show;
+  });
  }
  ngOnInit(){
   this.patientService.getPatient().subscribe(data =>{

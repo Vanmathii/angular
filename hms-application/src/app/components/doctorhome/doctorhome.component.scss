@@ -6,25 +6,18 @@
     font-family: 'Open Sans', sans-serif;
     background-color: #f1f1f1;
     margin: 10px;
-    padding: 10px;
-    font-size: 10px;
+    padding: 21px;
+    font-size: 14px;
+    height: 475px;
+    width: 227px;
   }
   .user{
       background-image: url("src/app/user.png");
       height: 70px;
       width: 70px;
-      margin: 20px;
+      margin-left: 74px;
       background-size: cover;
       background-repeat: no-repeat;
-  }
-  #bt{
-    font-family: 'Open Sans', sans-serif;
-      height: 20px;
-      width: 80px;
-      font-size: 10px;
-      margin: 10px;
-      text-align: center;
-
   }
   h2{
     font-family: 'Open Sans', sans-serif;
@@ -34,3 +27,48 @@
     font-family: 'Open Sans', sans-serif;
     text-align: center;
   }
+  #delete{
+    height: 141px;
+    width: 158px;
+    margin-left: 650px;
+
+  }
+  #bt {
+    font-weight: 2em;
+    background-color: rgb(43, 184, 130);
+    color: white;
+    padding: 16px;
+    margin: 8px ;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    opacity: 0.8;
+  }
+  #bt:hover{
+    opacity: 1;
+  }
+  #btn {
+    font-weight: 2em;
+    background-color: rgb(43, 184, 130);
+    color: white;
+    padding: 10px;
+    margin: 4px ;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    opacity: 0.9;
+  }
+  input{
+    height: 15px;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+.buttons{
+  text-align: center;
+  margin-top: 55px;
+  margin-left: 31px;
+}

@@ -12,11 +12,13 @@ export class DoctorService
   private getDoctorByIdUrl: string;
   private addDoctorUrl: string;
   private updateDoctorUrl:string;
+  private deleteDoctorUrl:string;
   constructor(private http: HttpClient) {
     this.getDoctorUrl = 'http://localhost:8080/doctor/all';
     this.addDoctorUrl = "http://localhost:8080/doctor/create";
     this.updateDoctorUrl = "http://localhost:8080/doctor/update";
     this.getDoctorByIdUrl = "http://localhost:8080/doctor/id/";
+    this.deleteDoctorUrl = "http://localhost:8080/doctor/delete/";
   }
  
   public getDoctor(): Observable<Doctor[]> {
@@ -27,7 +29,13 @@ export class DoctorService
     console.log(this.getDoctorByIdUrl);
     return this.http.get<Doctor>(this.getDoctorByIdUrl);
   }
-  
+  public deleteDoctor(userId: Number) {
+    console.log(userId);
+    this.deleteDoctorUrl=this.deleteDoctorUrl.concat(userId.toString());
+    console.log(this.deleteDoctorUrl);
+    return this.http.put(this.deleteDoctorUrl,userId);
+   }
+
   public saveDoctor(doctor: Doctor) {
     console.log(doctor);
     return this.http.post<Doctor>(this.addDoctorUrl, doctor);

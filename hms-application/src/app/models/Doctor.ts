@@ -5,9 +5,9 @@ export class Doctor {
     lastName: String;
     userAge:number;
     userMobileNumber:String;
-    userAddressLine1:String;
-    userAddressLine2:String;
-    userAddressLine3:String;
+    addressLine1:String;
+    addressLine2:String;
+    addressLine3:String;
     userName:String;
     password:String;
     specialization:String;

@@ -34,9 +34,9 @@ export class AddDoctorComponent implements OnInit {
    this.doctor.firstName=this.firstName;  
    this.doctor.lastName=this.lastName;  
    this.doctor.userMobileNumber=this.userMobileNumber;  
-   this.doctor.userAddressLine1=this.addressLine1;  
-   this.doctor.userAddressLine2=this.addressLine2;  
-   this.doctor.userAddressLine3=this.addressLine3;
+   this.doctor.addressLine1=this.addressLine1;  
+   this.doctor.addressLine2=this.addressLine2;  
+   this.doctor.addressLine3=this.addressLine3;
    this.doctor.userName=this.userName;
    this.doctor.password=this.password;
    this.doctor.specialization=this.specialization;

@@ -3,7 +3,7 @@
     <input [(ngModel)]="userId" placeholder="Enter your Id" required>
     <button class="registerbtn" (click)="getDoctorById()">Submit</button>
     Firstname:
-    <input id="firstName" #firstName value=${{doctor.firstName}} required>
+    <input id="firstName" #firstName value={{doctor.firstName}} required>
    
     Lastname:
     <input id="lastName" #lastName value={{doctor.lastName}} required>
@@ -15,13 +15,13 @@
     <input id="userMobileNumber" #userMobileNumber value={{doctor.userMobileNumber}} required>
   
     Address1:<br>
-    <input id="userAddressLine1" #userAddressLine1 value={{doctor.userAddressLine1}} required>
+    <input id="userAddressLine1" #addressLine1 value={{doctor.addressLine1}} required>
     <br>
     Address2:<br>
-    <input id="userAddressLine2" #userAddressLine2 value={{doctor.userAddressLine2}} required>
+    <input id="userAddressLine2" #addressLine2 value={{doctor.addressLine2}} required>
     <br>
     Address3:<br>
-    <input id="userAddressLine3" #userAddressLine3 value={{doctor.userAddressLine3}} required>
+    <input id="userAddressLine3" #addressLine3 value={{doctor.addressLine3}} required>
     <br>
     UserName:<br>
     <input id="userName" #userName value={{doctor.userName}} required>
@@ -30,7 +30,7 @@
     <input id="password" #password value={{doctor.password}} required>
     <br>
     Specialization:<br>
-    <input id="specialization" #firstName value={{doctor.specialization}} required>
+    <input id="specialization" #specialization value={{doctor.specialization}} required>
     <br><br>
-    <button class="registerbtn" (click)="updatedoctor(doctor.userName,doctor.userAge,doctor.userMobileNumber,doctor.userAddressLine1,doctor.userAddressLine2,doctor.userAddressLine3,doctor.specialization,doctor.firstName,doctor.lastName)">Update</button>
+    <button class="registerbtn" (click)="updatedoctor(firstName.value,lastName.value,userAge.value,userMobileNumber.value,addressLine1.value,addressLine2.value,addressLine3.value,userName.value,password.value,specialization.value)">Update</button>
   </div>
